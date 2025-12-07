@@ -1,36 +1,71 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# The Circle - Digital Agency Website
 
-## Getting Started
+**The Circle** is a modern, high-performance website designed for a digital agency. Built with **Next.js**, **TypeScript**, and **GSAP**, it features stunning animations, smooth transitions, and a fully responsive design to showcase creative portfolios and services.
 
-First, run the development server:
+## 🚀 Features
+
+*   **Modern Tech Stack**: Built with [Next.js](https://nextjs.org/) and [TypeScript](https://www.typescriptlang.org/) for robustness and performance.
+*   **Advanced Animations**: powered by [GSAP](https://gsap.com/) (GreenSock Animation Platform) for smooth scrolling and interactive elements.
+*   **3D Elements**: Integrated [Three.js](https://threejs.org/) for immersive 3D graphics.
+*   **Responsive Design**: Fully responsive layout using [Bootstrap](https://getbootstrap.com/) and custom SCSS.
+*   **Dynamic Content**: Sliders and carousels using `react-slick` and `swiper`.
+*   **Form Handling**: Robust form validation with `react-hook-form` and `yup`.
+
+## 🛠️ Technology Stack
+
+*   **Framework**: Next.js 14
+*   **Language**: TypeScript
+*   **Styling**: SCSS (Sass), Bootstrap 5
+*   **Animations**: GSAP, Three.js, React Scroll
+*   **UI Components**: React Bootstrap, React Modal Video
+*   **State Management & Logic**: React Hooks
+
+## 🏁 Getting Started
+
+Follow these steps to set up the project locally.
+
+### Prerequisites
+
+Ensure you have [Node.js](https://nodejs.org/) installed on your machine.
+
+### Installation
+
+1.  Clone the repository:
+    ```bash
+    git clone https://github.com/jigarChudasama/the-circle.git
+    ```
+2.  Navigate to the project directory:
+    ```bash
+    cd the-circle
+    ```
+3.  Install dependencies:
+    ```bash
+    npm install
+    # or
+    yarn install
+    ```
+
+### Running Development Server
+
+Start the development server:
 
 ```bash
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📁 Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+*   `src/app`: Logic and views for the application pages.
+*   `src/components`: Reusable UI components.
+*   `src/data`: Static data files.
+*   `src/hooks`: Custom React hooks.
+*   `src/layouts`: Layout components (Headers, Footers, etc.).
+*   `src/plugins`: Animation and utility plugins.
 
-## Learn More
+## 📄 License
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+[MIT](LICENSE)
