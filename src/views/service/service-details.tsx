@@ -16,7 +16,13 @@ import FooterOne from "@/layouts/footers/footer-one";
 // animation
 import { charAnimation, titleAnimation } from "@/utils/title-animation";
 
-const ServiceDetailsMain = () => {
+import { IService } from "@/data/service-data";
+
+type Props = {
+  service: IService;
+};
+
+const ServiceDetailsMain = ({ service }: Props) => {
   useScrollSmooth();
 
   useGSAP(() => {
@@ -37,7 +43,7 @@ const ServiceDetailsMain = () => {
         <div id="smooth-content">
           <main>
             {/* service details area */}
-            <ServiceDetailsArea />
+            <ServiceDetailsArea service={service} />
             {/* service details area */}
 
             {/* line image slider  */}
@@ -45,7 +51,7 @@ const ServiceDetailsMain = () => {
             {/* line image slider  */}
 
             {/* big text */}
-            <BigText />
+            {/* <BigText /> */}
             {/* big text */}
           </main>
 

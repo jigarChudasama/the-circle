@@ -242,6 +242,12 @@ export const blog_lists: IBlogDT[] = [
     date: '01 DEC, 2023',
     category: 'Marketing',
     author: 'John Doe',
+    slug: 'design-to-remember',
+    detail_desc: [
+      "The metaverse can be viewed as an evolution of today’s internet, which in turn evolved from passive media that we simply consumed. In the age of radio and television, the consumer’s only job was to listen and decide if they wanted to buy.",
+      "While the internet added active participation and community-building, the metaverse adds total immersion and the power to co-create, trade, promote and even profit in ways never before imagined – bringing an entirely new level of complexity to the ways in which brands can interact with their target market."
+    ],
+    detail_images: [b_m_1, b_m_2, b_m_3]
   },
   {
     id: 24,
@@ -250,6 +256,12 @@ export const blog_lists: IBlogDT[] = [
     date: '09. MAY. 2023',
     category: 'Branding',
     author: 'John Doe',
+    slug: 'simplistic-photo-setup',
+    detail_desc: [
+      "Photography is the art, application, and practice of creating durable images by recording light, either chemically by means of a light-sensitive material such as photographic film, or electronically by means of an image sensor.",
+      "It is employed in many fields of science, manufacturing (e.g., photolithography), and business, as well as its more direct uses for art, film and video production, recreational purposes, hobby, and mass communication."
+    ],
+    detail_images: [b_m_4, b_m_5, b_m_6]
   },
   {
     id: 25,
@@ -258,6 +270,12 @@ export const blog_lists: IBlogDT[] = [
     date: '20. NOV. 2023',
     category: 'Branding',
     author: 'John Doe',
+    slug: 'future-business-ideas',
+    detail_desc: [
+      "Starting a business is a great way to take control of your career and make money doing something you love. But coming up with a great business idea can be tough.",
+      "To help you get started, we’ve put together a list of the best small business ideas for 2024. These businesses are easy to start, have low startup costs, and are in high demand."
+    ],
+    detail_images: [b_m_7, b_m_1, b_m_2]
   },
   {
     id: 26,
@@ -266,6 +284,12 @@ export const blog_lists: IBlogDT[] = [
     date: '30. AUG. 2023',
     category: 'Branding',
     author: 'John Doe',
+    slug: 'is-it-time-to-rebrand',
+    detail_desc: [
+      "Rebranding is a marketing strategy in which a new name, term, symbol, design, concept or combination thereof is created for an established brand with the intention of developing a new, differentiated identity in the minds of consumers, investors, competitors, and other stakeholders.",
+      "Often, this involves radical changes to a brand's logo, name, legal names, image, marketing strategy, and advertising themes."
+    ],
+    detail_images: [b_m_3, b_m_4, b_m_5]
   },
   {
     id: 27,
@@ -274,6 +298,12 @@ export const blog_lists: IBlogDT[] = [
     date: '09. MAY. 2023',
     category: 'Branding',
     author: 'John Doe',
+    slug: 'desert-treasure-hunt',
+    detail_desc: [
+      "Treasure hunting is the physical search for treasure. For experienced treasure hunters, there are many methods of finding treasure.",
+      "The most common method is using a metal detector. Other methods include using checking historical records, maps, and even using a dowsing rod."
+    ],
+    detail_images: [b_m_6, b_m_7, b_m_1]
   },
   {
     id: 28,
@@ -282,6 +312,12 @@ export const blog_lists: IBlogDT[] = [
     date: '12. JAN. 2023',
     category: 'Branding',
     author: 'John Doe',
+    slug: 'visualizing-your-brand',
+    detail_desc: [
+      "Brand visualization is the process of creating a visual representation of your brand. This can include your logo, color palette, typography, and other visual elements.",
+      "It is an important part of branding because it helps to create a consistent and recognizable image for your brand."
+    ],
+    detail_images: [b_m_2, b_m_3, b_m_4]
   },
 ];
 

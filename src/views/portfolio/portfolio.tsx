@@ -49,7 +49,7 @@ const PortfolioRandomMain = () => {
   });
 
   // contact data
-  const contact_data = ["Have a project?", "Email us", "Join our team"];
+  const contact_data = ["Have a project?"];
   return (
     <Wrapper>
       {/* magic cursor start */}
@@ -119,7 +119,7 @@ const PortfolioRandomMain = () => {
                   <div className="col-xl-10">
                     <div className="rm-project-contact-wrap">
                       {contact_data.map((text, i) => (
-                        <a href="#" key={i}>
+                        <a href="/contact" key={i}>
                           <div className="rm-project-contact-item d-flex align-items-center justify-content-between">
                             <span>{text}</span>
                             <UpArrowThree />

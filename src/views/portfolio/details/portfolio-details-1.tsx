@@ -14,7 +14,13 @@ import FooterOne from "@/layouts/footers/footer-one";
 // animation
 import { charAnimation, titleAnimation } from "@/utils/title-animation";
 
-const PortfolioDetailsThreeMain = () => {
+import { IPortfolio } from "@/data/portfolio-data";
+
+type Props = {
+  portfolio: IPortfolio;
+};
+
+const PortfolioDetailsThreeMain = ({ portfolio }: Props) => {
   useScrollSmooth();
 
   useGSAP(() => {
@@ -35,7 +41,7 @@ const PortfolioDetailsThreeMain = () => {
         <div id="smooth-content">
           <main>
             {/* portfolio details area */}
-            <PortfolioDetailsThreeArea />
+            <PortfolioDetailsThreeArea portfolio={portfolio} />
             {/* portfolio details area */}
           </main>
 

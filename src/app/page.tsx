@@ -3,7 +3,7 @@ import { Metadata } from "next";
 import HomeMain from "@/views/home/home";
 
 export const metadata: Metadata = {
-  title: "Liko - Home Main",
+  title: "The Circle - Home Main",
 };
 
 

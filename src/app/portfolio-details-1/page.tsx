@@ -7,9 +7,12 @@ export const metadata: Metadata = {
   title: "Liko - Portfolio Details 3 page",
 };
 
+import portfolio_data from "@/data/portfolio-data";
+
 const PortfolioDetailsThreePage = () => {
+  const portfolio = portfolio_data[0];
   return (
-    <PortfolioDetailsThreeMain />
+    <PortfolioDetailsThreeMain portfolio={portfolio} />
   );
 };
 

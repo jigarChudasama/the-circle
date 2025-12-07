@@ -6,9 +6,12 @@ export const metadata: Metadata = {
   title: "Liko - Blog Details 2 page",
 };
 
+import { blog_data } from "@/data/blog-data";
+
 const BlogDetailsTwoPage = () => {
+  const blog = blog_data[0];
   return (
-    <BlogDetailsTwoMain />
+    <BlogDetailsTwoMain blog={blog} />
   );
 };
 

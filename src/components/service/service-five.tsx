@@ -6,26 +6,7 @@ import s_1 from "@/assets/img/home-01/service/service-icon-1.png";
 import s_2 from "@/assets/img/home-01/service/service-icon-2.png";
 import s_3 from "@/assets/img/home-01/service/service-icon-3.png";
 
-const service_data = [
-  {
-    id: 1,
-    title: "Branding",
-    desc: "Branding is one of the most important ingredients for the success of any business.",
-    icon: s_2,
-  },
-  {
-    id: 2,
-    title: "Website design",
-    desc: "The perfect cocktail should still look and taste perfect no matter the size of the glass you serve it in.",
-    icon: s_1,
-  },
-  {
-    id: 3,
-    title: "Marketing",
-    desc: "We take that same approach with the apps & websites we create. you go there because of the overall experience.",
-    icon: s_3,
-  },
-];
+import service_data from "@/data/service-data";
 
 // service items
 export function ServiceItems() {
@@ -40,7 +21,7 @@ export function ServiceItems() {
             </div>
             <div className="tp-service-4-content">
               <h4 className="tp-service-4-title-sm tp-text-black">
-                <Link href="/service">{item.title}</Link>
+                <Link href={`/service-details/${item.slug}`}>{item.title}</Link>
               </h4>
               <p>{item.desc}</p>
             </div>
@@ -71,7 +52,7 @@ export default function ServiceFive() {
           </div>
         </div>
         <div className="tp-service-5-wrap">
-          <ServiceItems/>
+          <ServiceItems />
         </div>
       </div>
     </div>

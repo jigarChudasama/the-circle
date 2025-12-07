@@ -15,10 +15,15 @@ import BlogDetailsRelatedPosts from "@/components/blog/details/blog-details-rela
 import { charAnimation } from "@/utils/title-animation";
 import BlogDetailsAreaTwo from "@/components/blog/details/blog-details-area-2";
 // image
-import blog_bg from "@/assets/img/inner-blog/blog-details-without-sidebar/blog-details-3.jpg";
 import FooterOne from "@/layouts/footers/footer-one";
 
-const BlogDetailsTwoMain = () => {
+import { IBlogDT } from "@/types/blog-d-t";
+
+type Props = {
+  blog: IBlogDT;
+}
+
+const BlogDetailsTwoMain = ({ blog }: Props) => {
   useScrollSmooth();
 
   useGSAP(() => {
@@ -45,10 +50,10 @@ const BlogDetailsTwoMain = () => {
                     <div className="col-xl-12">
                       <div className="blog-details-content z-index-5">
                         <span className="blog-details-meta text-black">
-                          Creative
+                          {blog.category}
                         </span>
                         <h4 className="blog-details-title tp-text-black tp-char-animation">
-                          Taking Your <br /> brand in the Metaverse
+                          {blog.title}
                         </h4>
                       </div>
                     </div>
@@ -60,12 +65,12 @@ const BlogDetailsTwoMain = () => {
                   <div className="row">
                     <div className="col-md-4">
                       <div className="blog-details-top-meta text-center">
-                        <span>Mark Hopkins</span>
+                        <span>{blog.author}</span>
                       </div>
                     </div>
                     <div className="col-md-4">
                       <div className="blog-details-top-meta text-center">
-                        <span>01 October, 2022</span>
+                        <span>{blog.date}</span>
                       </div>
                     </div>
                     <div className="col-md-4">
@@ -80,7 +85,7 @@ const BlogDetailsTwoMain = () => {
                         <Image
                           className="w-100"
                           data-speed=".8"
-                          src={blog_bg}
+                          src={blog.img!}
                           alt="blog_bg"
                           style={{ height: "auto" }}
                         />
@@ -93,7 +98,7 @@ const BlogDetailsTwoMain = () => {
             {/* blog details hero */}
 
             {/* blog details area */}
-            <BlogDetailsAreaTwo />
+            <BlogDetailsAreaTwo blog={blog} />
             {/* blog details area */}
 
             {/* related posts */}

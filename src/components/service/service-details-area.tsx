@@ -1,13 +1,27 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { IService } from "@/data/service-data";
 
 // images
 import sv_1 from "@/assets/img/inner-service/sercive-details/sv-details-1.jpg";
 import sv_2 from "@/assets/img/inner-service/sercive-details/sv-details-2.jpg";
 import sv_3 from "@/assets/img/inner-service/sercive-details/sv-details-3.jpg";
 
-export default function ServiceDetailsArea() {
+type Props = {
+  service: IService;
+};
+
+export default function ServiceDetailsArea({ service }: Props) {
+  const {
+    detail_subtitle,
+    detail_title,
+    detail_desc_1,
+    detail_desc_2,
+    features,
+    images,
+  } = service;
+
   return (
     <div className="service-details__area service-details__space pt-200 pb-120">
       <div className="container">
@@ -15,26 +29,18 @@ export default function ServiceDetailsArea() {
           <div className="col-xl-12">
             <div className="service-details__title-box mb-40">
               <span className="service-details__subtitle tp-char-animation">
-                Design Studio
+                {detail_subtitle}
               </span>
-              <h4 className="sv-hero-title tp-char-animation">
-                Logo and branding
-              </h4>
+              <h4 className="sv-hero-title tp-char-animation">{detail_title}</h4>
             </div>
           </div>
           <div className="row">
             <div className="offset-xl-4 col-xl-5">
               <div className="service-details__banner-text mb-80">
-                <p className="mb-30 tp_title_anim">
-                  Branding is essential to establish yourself in the market
-                  <br /> in a unique and permanent way. At Riveal, we attach{" "}
-                  <br /> great importance. We seek to understand your business
-                  to better convey your values ​​and your talent <br /> through
-                  your brand image.{" "}
-                </p>
-                <p className="tp_title_anim">
-                  Explore our achievements and let yourself be <br /> convinced!
-                </p>
+                <p className="mb-30 tp_title_anim">{detail_desc_1}</p>
+                {detail_desc_2 && (
+                  <p className="tp_title_anim">{detail_desc_2}</p>
+                )}
               </div>
             </div>
           </div>
@@ -45,12 +51,14 @@ export default function ServiceDetailsArea() {
           <div className="col-xl-12">
             <div className="service-details__tab-wrapper text-center mb-120">
               <div className="service-details__tab-thumb">
-                <Image
-                  data-speed="0.4"
-                  src={sv_1}
-                  alt="service-img"
-                  style={{ height: "auto" }}
-                />
+                {images && images[0] && (
+                  <Image
+                    data-speed="0.4"
+                    src={images[0]}
+                    alt="service-img"
+                    style={{ height: "auto" }}
+                  />
+                )}
               </div>
             </div>
           </div>
@@ -61,47 +69,42 @@ export default function ServiceDetailsArea() {
           <div className="col-xl-7 col-lg-7">
             <div className="service-details__left-wrap">
               <div className="service-details__left-text pb-20">
-                <p className="text-1 tp_title_anim">
-                  Your logo is at the heart of your identity. An impactful
-                  design, tailor-made and in line with your activity will allow
-                  you to differentiate yourself and mark your audience.
-                </p>
-                <p>
-                  Great user experience design lets users focus on the task they
-                  have to complete and evokes emotion without distracting them.!
-                </p>
+                <p className="text-1 tp_title_anim">{detail_desc_1}</p>
+                {detail_desc_2 && <p>{detail_desc_2}</p>}
               </div>
-              <div className="service-details__fea-list">
-                <ul>
-                  <li>Graphic research and production</li>
-                  <li>Presentation of your logo on different media</li>
-                  <li>
-                    Advice on the graphic orientation of your logo or its
-                    redesign
-                  </li>
-                  <li>Delivery of your logo in professional formats</li>
-                </ul>
-              </div>
+              {features && features.length > 0 && (
+                <div className="service-details__fea-list">
+                  <ul>
+                    {features.map((feature, index) => (
+                      <li key={index}>{feature}</li>
+                    ))}
+                  </ul>
+                </div>
+              )}
               <div className="service-details__sm-thumb-wrap mb-60">
                 <div className="row">
-                  <div className="col-xl-6 col-lg-6 col-md-6 mb-20">
-                    <div className="service-details__sm-thumb">
-                      <Image
-                        src={sv_2}
-                        alt="service-img"
-                        style={{ height: "auto" }}
-                      />
+                  {images && images[1] && (
+                    <div className="col-xl-6 col-lg-6 col-md-6 mb-20">
+                      <div className="service-details__sm-thumb">
+                        <Image
+                          src={images[1]}
+                          alt="service-img"
+                          style={{ height: "auto" }}
+                        />
+                      </div>
                     </div>
-                  </div>
-                  <div className="col-xl-6 col-lg-6 col-md-6 mb-20">
-                    <div className="service-details__sm-thumb">
-                      <Image
-                        src={sv_3}
-                        alt="service-img"
-                        style={{ height: "auto" }}
-                      />
+                  )}
+                  {images && images[2] && (
+                    <div className="col-xl-6 col-lg-6 col-md-6 mb-20">
+                      <div className="service-details__sm-thumb">
+                        <Image
+                          src={images[2]}
+                          alt="service-img"
+                          style={{ height: "auto" }}
+                        />
+                      </div>
                     </div>
-                  </div>
+                  )}
                 </div>
               </div>
               <div className="service-details__left-text">
@@ -130,13 +133,10 @@ export default function ServiceDetailsArea() {
               </div>
               <div className="service-details__right-text-box">
                 <h4>
-                  Logo <br /> Design
+                  {detail_title}
+                  {/* Logo <br /> Design */}
                 </h4>
-                <p className="mb-20">
-                  Your logo is at the heart of your identity. An impactful
-                  design, tailor-made and in line with your activity will allow
-                  you to differentiate yourself and mark your audience.
-                </p>
+                <p className="mb-20">{detail_desc_1}</p>
                 <Link
                   className="tp-btn-white background-black"
                   href="/contact"
